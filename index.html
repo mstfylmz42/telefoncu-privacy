@@ -3,141 +3,516 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gizlilik Politikası - Telefoncu: Esnaf Simülatörü</title>
+    <meta name="description" content="Telefoncu: Esnaf Simülatörü Resmi Gizlilik Politikası / Official Privacy Policy">
+    <title>Gizlilik Politikası • Telefoncu: Esnaf Simülatörü</title>
     <style>
         :root {
-            --bg: #f8f9fa;
-            --card: #ffffff;
-            --text: #1f2937;
-            --muted: #4b5563;
+            --bg: #f1f5f9;
+            --surface: #ffffff;
+            --surface-alt: #f8fafc;
+            --text-primary: #0f172a;
+            --text-secondary: #475569;
             --accent: #2563eb;
-            --border: #e5e7eb;
+            --accent-soft: #eff6ff;
+            --border: #e2e8f0;
+            --shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.06), 0 8px 10px -6px rgba(15, 23, 42, 0.04);
         }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #0b1120;
+                --surface: #111827;
+                --surface-alt: #1e293b;
+                --text-primary: #f8fafc;
+                --text-secondary: #94a3b8;
+                --accent: #3b82f6;
+                --accent-soft: rgba(59, 130, 246, 0.14);
+                --border: #1e293b;
+                --shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4);
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.7;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, Helvetica, Arial, sans-serif;
+            line-height: 1.75;
             background-color: var(--bg);
-            color: var(--text);
+            color: var(--text-primary);
             margin: 0;
-            padding: 24px 16px;
+            padding: 32px 16px 48px;
+            -webkit-font-smoothing: antialiased;
         }
-        .container {
-            max-width: 820px;
+
+        .wrapper {
+            max-width: 860px;
             margin: 0 auto;
-            background: var(--card);
-            padding: 36px 40px;
-            border-radius: 14px;
-            border: 1px solid var(--border);
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
         }
-        h1 {
-            font-size: 1.85rem;
-            color: #111827;
-            margin-top: 0;
-            padding-bottom: 14px;
-            border-bottom: 2px solid var(--border);
-        }
-        .meta {
-            display: inline-block;
-            background: #eff6ff;
-            color: var(--accent);
-            font-size: 0.9rem;
-            font-weight: 600;
-            padding: 4px 12px;
-            border-radius: 6px;
+
+        .topbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             margin-bottom: 16px;
+            padding: 0 4px;
         }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            color: var(--text-primary);
+        }
+
+        .brand-badge {
+            width: 32px;
+            height: 32px;
+            border-radius: 8px;
+            background: linear-gradient(135deg, #2563eb, #1d4ed8);
+            color: #fff;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 0.9rem;
+            letter-spacing: -0.5px;
+        }
+
+        .lang-switch {
+            display: inline-flex;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 3px;
+            gap: 2px;
+        }
+
+        .lang-btn {
+            border: none;
+            background: transparent;
+            color: var(--text-secondary);
+            font-size: 0.82rem;
+            font-weight: 600;
+            padding: 6px 12px;
+            border-radius: 7px;
+            cursor: pointer;
+            transition: all 0.15s ease;
+        }
+
+        .lang-btn.active {
+            background: var(--accent);
+            color: #ffffff;
+        }
+
+        .card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            padding: 44px 48px;
+            box-shadow: var(--shadow);
+        }
+
+        .doc-header {
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 24px;
+            margin-bottom: 28px;
+        }
+
+        .pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: var(--accent-soft);
+            color: var(--accent);
+            font-size: 0.82rem;
+            font-weight: 600;
+            padding: 5px 12px;
+            border-radius: 999px;
+            margin-bottom: 14px;
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            margin: 0 0 10px;
+            color: var(--text-primary);
+        }
+
+        .subtitle {
+            color: var(--text-secondary);
+            font-size: 1rem;
+            margin: 0;
+        }
+
+        .toc {
+            background: var(--surface-alt);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 18px 22px;
+            margin-bottom: 32px;
+        }
+
+        .toc-title {
+            font-size: 0.82rem;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            font-weight: 700;
+            color: var(--text-secondary);
+            margin: 0 0 10px;
+        }
+
+        .toc-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 8px 16px;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .toc-grid a {
+            color: var(--text-primary);
+            font-size: 0.9rem;
+            font-weight: 500;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .toc-grid a:hover {
+            color: var(--accent);
+        }
+
+        section {
+            margin-bottom: 30px;
+            scroll-margin-top: 24px;
+        }
+
         h2 {
-            font-size: 1.2rem;
-            color: #111827;
-            margin-top: 30px;
-            margin-bottom: 10px;
+            font-size: 1.22rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin: 0 0 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
+
+        .sec-num {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 26px;
+            height: 26px;
+            border-radius: 7px;
+            background: var(--accent-soft);
+            color: var(--accent);
+            font-size: 0.85rem;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
         p, li {
-            color: var(--muted);
+            color: var(--text-secondary);
             font-size: 0.98rem;
+            margin-top: 0;
         }
+
         ul {
             padding-left: 20px;
+            margin-bottom: 14px;
         }
+
         li {
-            margin-bottom: 6px;
+            margin-bottom: 8px;
         }
+
+        strong {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
         a {
             color: var(--accent);
             text-decoration: none;
+            font-weight: 500;
         }
+
         a:hover {
             text-decoration: underline;
         }
-        .contact-box {
-            background: #f9fafb;
-            border: 1px solid var(--border);
-            border-radius: 10px;
-            padding: 16px 20px;
-            margin-top: 12px;
+
+        .info-callout {
+            background: var(--surface-alt);
+            border-left: 3px solid var(--accent);
+            border-radius: 0 10px 10px 0;
+            padding: 14px 18px;
+            margin: 14px 0;
+            font-size: 0.93rem;
+            color: var(--text-secondary);
         }
+
+        .support-card {
+            background: var(--surface-alt);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 20px 24px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px;
+            margin-top: 14px;
+        }
+
+        .support-item span {
+            display: block;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-secondary);
+            margin-bottom: 4px;
+        }
+
+        .support-item strong {
+            font-size: 0.98rem;
+        }
+
         footer {
             margin-top: 36px;
-            padding-top: 16px;
+            padding-top: 20px;
             border-top: 1px solid var(--border);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 12px;
             font-size: 0.85rem;
-            color: #6b7280;
-            text-align: center;
+            color: var(--text-secondary);
         }
-        @media (max-width: 600px) {
-            .container { padding: 24px 20px; }
-            h1 { font-size: 1.5rem; }
+
+        .lang-en { display: none; }
+        body.en .lang-tr { display: none; }
+        body.en .lang-en { display: block; }
+        body.en span.lang-en, body.en a.lang-en { display: inline; }
+        body.en li.lang-en { display: list-item; }
+
+        @media (max-width: 640px) {
+            body { padding: 16px 12px 36px; }
+            .card { padding: 26px 20px; border-radius: 14px; }
+            h1 { font-size: 1.55rem; }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Gizlilik Politikası</h1>
-        <div class="meta">Son Güncelleme: 09 Kasım 2026</div>
-
-        <p><strong>Telefoncu: Esnaf Simülatörü</strong> ("Uygulama") için hazırlanan bu Gizlilik Politikası, Uygulamayı mobil cihazlarınızda kullandığınızda verilerinizin nasıl işlendiğini, saklandığını ve korunduğunu şeffaf biçimde açıklar.</p>
-
-        <h2>1. Toplanan Veriler ve Yerel Depolama</h2>
-        <p>Uygulama; adınız, soyadınız, telefon numaranız, e-posta adresiniz veya hassas konum veriniz gibi doğrudan kişisel kimlik bilgilerini <strong>toplamaz ve harici sunuculara aktarmaz</strong>.</p>
-        <ul>
-            <li><strong>Oyun İlerlemesi:</strong> Oyun içi bakiyeniz, dükkân seviyeniz, envanteriniz, tamir kayıtlarınız ve ayar tercihleriniz yalnızca kendi cihazınızın yerel depolama alanında saklanır.</li>
-            <li><strong>Hesap Zorunluluğu Yoktur:</strong> Oyunu oynamak için üyelik oluşturmanız veya giriş yapmanız gerekmez.</li>
-        </ul>
-
-        <h2>2. Üçüncü Taraf Hizmetler ve Reklamlar (Google AdMob)</h2>
-        <p>Uygulama, ücretsiz olarak sunulabilmek ve geliştirme maliyetlerini karşılayabilmek amacıyla <strong>Google AdMob</strong> reklam altyapısını kullanır. Google AdMob, reklam gösterimi, sıklık sınırlaması ve reklam performansının ölçülmesi amacıyla aşağıdaki verileri işleyebilir:</p>
-        <ul>
-            <li>Cihaz reklam tanımlayıcıları (iOS için IDFA, Android için AAID)</li>
-            <li>Genel cihaz bilgileri (cihaz modeli, işletim sistemi sürümü, dil ve yaklaşık IP tabanlı ülke/bölge bilgisi)</li>
-            <li>Reklam gösterim ve tıklama etkileşim verileri</li>
-        </ul>
-        <p><strong>Apple App Tracking Transparency (ATT):</strong> iOS cihazlarda kişiselleştirilmiş reklam gösterimi için cihaz tanımlayıcısına yalnızca siz uygulama açılışındaki Apple izin penceresinden açıkça onay verirseniz erişilir. İzin vermeseniz dahi oyunu tüm özellikleriyle oynamaya devam edebilirsiniz.</p>
-        <p>Google'ın reklam verilerini nasıl işlediği hakkında detaylı bilgi için: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Gizlilik Politikası</a></p>
-
-        <h2>3. Veri Saklama ve Silme Haklarınız</h2>
-        <p>Oyun verileriniz yalnızca cihazınızda tutulduğu için verilerinizin kontrolü tamamen sizdedir:</p>
-        <ul>
-            <li>Uygulamayı cihazınızdan sildiğinizde tüm yerel oyun ilerlemeniz kalıcı olarak silinir.</li>
-            <li>Reklam izleme tercihlerinizi dilediğiniz zaman cihazınızın <strong>Ayarlar &gt; Gizlilik ve Güvenlik &gt; Takip</strong> (iOS) veya <strong>Ayarlar &gt; Google &gt; Reklamlar</strong> (Android) menüsünden sıfırlayabilir veya kapatabilirsiniz.</li>
-        </ul>
-
-        <h2>4. Çocukların Gizliliği</h2>
-        <p>Uygulama, 13 yaşın altındaki çocuklara yönelik değildir ve 13 yaşın altındaki çocuklardan bilerek herhangi bir kişisel veri toplamaz.</p>
-
-        <h2>5. Politika Değişiklikleri</h2>
-        <p>Bu Gizlilik Politikası, yasal gereklilikler veya uygulamaya eklenen yeni özellikler doğrultusunda güncellenebilir. Güncellemeler bu sayfada yayınlandığı tarihten itibaren geçerli olur.</p>
-
-        <h2>6. İletişim ve Destek</h2>
-        <p>Gizlilik politikamız, veri güvenliği veya oyunla ilgili her türlü soru, öneri ve talebiniz için uygulama içerisindeki destek bölümünden veya mağaza sayfasındaki geliştirici iletişim kanallarından bize ulaşabilirsiniz:</p>
-        <div class="contact-box">
-            <strong>Uygulama:</strong> Telefoncu: Esnaf Simülatörü<br>
-            <strong>Uygulama İçi Destek:</strong> Ayarlar &gt; Hata Bildir
+    <div class="wrapper">
+        <div class="topbar">
+            <div class="brand">
+                <div class="brand-badge">TES</div>
+                <span>Telefoncu: Esnaf Simülatörü</span>
+            </div>
+            <div class="lang-switch" role="group" aria-label="Language Switcher">
+                <button type="button" class="lang-btn active" id="btn-tr" onclick="setLang('tr')">TR</button>
+                <button type="button" class="lang-btn" id="btn-en" onclick="setLang('en')">EN</button>
+            </div>
         </div>
 
-        <footer>
-            &copy; 2026 Telefoncu: Esnaf Simülatörü. Tüm hakları saklıdır.
-        </footer>
+        <main class="card">
+            <div class="doc-header">
+                <div class="pill">
+                    <span class="lang-tr">Son Güncelleme: 09 Kasım 2026</span>
+                    <span class="lang-en">Last Updated: November 9, 2026</span>
+                </div>
+                <h1 class="lang-tr">Gizlilik Politikası</h1>
+                <h1 class="lang-en">Privacy Policy</h1>
+                <p class="subtitle lang-tr">
+                    <strong>Telefoncu: Esnaf Simülatörü</strong> mobil uygulamasını kullanırken verilerinizin nasıl korunduğunu ve işlendiğini şeffaf biçimde açıklar.
+                </p>
+                <p class="subtitle lang-en">
+                    This Privacy Policy transparently explains how your data is protected and processed when using the <strong>Telefoncu: Esnaf Simülatörü</strong> mobile application.
+                </p>
+            </div>
+
+            <nav class="toc" aria-label="İçindekiler">
+                <div class="toc-title lang-tr">Hızlı Erişim</div>
+                <div class="toc-title lang-en">Quick Navigation</div>
+                <ul class="toc-grid">
+                    <li><a href="#sec-1"><span class="lang-tr">1. Toplanan Veriler ve Yerel Kayıt</span><span class="lang-en">1. Data Collection &amp; Local Storage</span></a></li>
+                    <li><a href="#sec-2"><span class="lang-tr">2. Reklamlar ve Üçüncü Taraflar</span><span class="lang-en">2. Advertising &amp; Third Parties</span></a></li>
+                    <li><a href="#sec-3"><span class="lang-tr">3. Veri Güvenliği ve Silme Hakları</span><span class="lang-en">3. Data Security &amp; Deletion Rights</span></a></li>
+                    <li><a href="#sec-4"><span class="lang-tr">4. Çocukların Gizliliği</span><span class="lang-en">4. Children's Privacy</span></a></li>
+                    <li><a href="#sec-5"><span class="lang-tr">5. Politika Güncellemeleri</span><span class="lang-en">5. Policy Updates</span></a></li>
+                    <li><a href="#sec-6"><span class="lang-tr">6. Destek ve İletişim</span><span class="lang-en">6. Support &amp; Contact</span></a></li>
+                </ul>
+            </nav>
+
+            <!-- SECTION 1 -->
+            <section id="sec-1">
+                <h2>
+                    <span class="sec-num">1</span>
+                    <span class="lang-tr">Toplanan Veriler ve Yerel Depolama</span>
+                    <span class="lang-en">Data Collection and Local Storage</span>
+                </h2>
+                <p class="lang-tr">
+                    <strong>Telefoncu: Esnaf Simülatörü</strong> ("Uygulama"); adınız, soyadınız, telefon numaranız, e-posta adresiniz veya kesin konum veriniz gibi doğrudan kişisel kimlik bilgilerini <strong>toplamaz ve harici sunucularda depolamaz</strong>.
+                </p>
+                <p class="lang-en">
+                    <strong>Telefoncu: Esnaf Simülatörü</strong> ("Application") does <strong>not collect or store on external servers</strong> any directly identifiable personal information such as your name, phone number, email address, or precise location data.
+                </p>
+                <ul>
+                    <li class="lang-tr"><strong>Yerel Oyun İlerlemesi:</strong> Oyun içi bakiyeniz, dükkân seviyeniz, envanteriniz, tamir geçmişiniz ve uygulama ayarlarınız yalnızca kendi cihazınızın yerel depolama alanında tutulur.</li>
+                    <li class="lang-en"><strong>Local Game Progress:</strong> Your in-game balance, shop level, inventory, repair logs, and settings are stored exclusively on your device's local storage.</li>
+                    <li class="lang-tr"><strong>Hesap Gerektirmez:</strong> Uygulamayı kullanmak için kayıt olmanız, şifre oluşturmanız veya herhangi bir sosyal medya hesabıyla giriş yapmanız gerekmez.</li>
+                    <li class="lang-en"><strong>No Account Required:</strong> You do not need to register, create a password, or sign in with any social media account to play the Application.</li>
+                </ul>
+            </section>
+
+            <!-- SECTION 2 -->
+            <section id="sec-2">
+                <h2>
+                    <span class="sec-num">2</span>
+                    <span class="lang-tr">Reklam Hizmetleri ve Üçüncü Taraflar (Google AdMob)</span>
+                    <span class="lang-en">Advertising Services and Third Parties (Google AdMob)</span>
+                </h2>
+                <p class="lang-tr">
+                    Uygulama, ücretsiz olarak sunulabilmek amacıyla <strong>Google AdMob</strong> reklam altyapısını kullanır. Google AdMob; reklam gösterimi, sıklık kontrolü ve performans ölçümü için standart teknik verileri işleyebilir:
+                </p>
+                <p class="lang-en">
+                    To remain free to play, the Application uses <strong>Google AdMob</strong> advertising services. Google AdMob may process standard technical data for ad delivery, frequency capping, and performance measurement:
+                </p>
+                <ul>
+                    <li class="lang-tr">Cihaz reklam tanımlayıcıları (iOS cihazlarda IDFA, Android cihazlarda AAID)</li>
+                    <li class="lang-en">Device advertising identifiers (IDFA on iOS devices, AAID on Android devices)</li>
+                    <li class="lang-tr">Temel cihaz ve ağ bilgileri (cihaz modeli, işletim sistemi sürümü, dil tercihi ve IP tabanlı genel ülke/bölge bilgisi)</li>
+                    <li class="lang-en">Basic device and network information (device model, OS version, language preference, and approximate IP-based country/region)</li>
+                    <li class="lang-tr">Reklam görüntüleme ve etkileşim istatistikleri</li>
+                    <li class="lang-en">Ad impression and interaction metrics</li>
+                </ul>
+                <div class="info-callout lang-tr">
+                    <strong>Apple App Tracking Transparency (ATT):</strong> iOS cihazlarda reklam tanımlayıcısına (IDFA) yalnızca uygulama açılışında gösterilen Apple izin penceresinden açıkça onay vermeniz halinde erişilir. İzin vermeseniz dahi oyunu tüm özellikleriyle oynamaya devam edebilirsiniz.
+                </div>
+                <div class="info-callout lang-en">
+                    <strong>Apple App Tracking Transparency (ATT):</strong> On iOS devices, the advertising identifier (IDFA) is accessed only if you explicitly grant permission via the Apple tracking prompt. You can continue playing the game with all features even if you decline tracking.
+                </div>
+                <p class="lang-tr">
+                    Google'ın verileri nasıl işlediği hakkında ayrıntılı bilgi için: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Gizlilik Politikası &rarr;</a>
+                </p>
+                <p class="lang-en">
+                    For detailed information on how Google processes data, please visit: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy &rarr;</a>
+                </p>
+            </section>
+
+            <!-- SECTION 3 -->
+            <section id="sec-3">
+                <h2>
+                    <span class="sec-num">3</span>
+                    <span class="lang-tr">Veri Güvenliği ve Silme Haklarınız</span>
+                    <span class="lang-en">Data Security and Your Deletion Rights</span>
+                </h2>
+                <p class="lang-tr">
+                    Oyun verileriniz harici bir bulut veritabanında tutulmadığından tüm verilerinizin kontrolü doğrudan sizdedir:
+                </p>
+                <p class="lang-en">
+                    Because your game data is not stored in any external cloud database, you maintain full control over your data:
+                </p>
+                <ul>
+                    <li class="lang-tr"><strong>Tam Veri Silme:</strong> Uygulamayı cihazınızdan kaldırdığınızda cihazınızda saklanan tüm yerel oyun verileri kalıcı olarak silinir.</li>
+                    <li class="lang-en"><strong>Complete Data Deletion:</strong> Uninstalling the Application from your device permanently deletes all locally stored game data.</li>
+                    <li class="lang-tr"><strong>Reklam Tercihlerini Yönetme:</strong> Cihazınızın <strong>Ayarlar &gt; Gizlilik ve Güvenlik &gt; Takip</strong> (iOS) veya <strong>Ayarlar &gt; Google &gt; Reklamlar</strong> (Android) menüsünden reklam tanımlayıcınızı sıfırlayabilir veya kişiselleştirilmiş reklamları kapatabilirsiniz.</li>
+                    <li class="lang-en"><strong>Managing Ad Preferences:</strong> You can reset your advertising identifier or opt out of personalized ads anytime via <strong>Settings &gt; Privacy &amp; Security &gt; Tracking</strong> (iOS) or <strong>Settings &gt; Google &gt; Ads</strong> (Android).</li>
+                </ul>
+            </section>
+
+            <!-- SECTION 4 -->
+            <section id="sec-4">
+                <h2>
+                    <span class="sec-num">4</span>
+                    <span class="lang-tr">Çocukların Gizliliği</span>
+                    <span class="lang-en">Children's Privacy</span>
+                </h2>
+                <p class="lang-tr">
+                    Uygulama, 13 yaşın altındaki çocuklara yönelik değildir ve 13 yaşın altındaki çocuklardan bilerek hiçbir kişisel veri toplamaz.
+                </p>
+                <p class="lang-en">
+                    The Application is not directed toward children under the age of 13, and we do not knowingly collect any personal data from children under 13.
+                </p>
+            </section>
+
+            <!-- SECTION 5 -->
+            <section id="sec-5">
+                <h2>
+                    <span class="sec-num">5</span>
+                    <span class="lang-tr">Politika Güncellemeleri</span>
+                    <span class="lang-en">Policy Updates</span>
+                </h2>
+                <p class="lang-tr">
+                    Bu Gizlilik Politikası, yasal düzenlemeler veya uygulamaya eklenen yeni özellikler doğrultusunda zaman zaman güncellenebilir. Yapılan değişiklikler bu sayfada yayınlandığı andan itibaren geçerlilik kazanır.
+                </p>
+                <p class="lang-en">
+                    This Privacy Policy may be updated periodically in accordance with legal requirements or new features added to the Application. Any changes become effective immediately upon publication on this page.
+                </p>
+            </section>
+
+            <!-- SECTION 6 -->
+            <section id="sec-6" style="margin-bottom: 0;">
+                <h2>
+                    <span class="sec-num">6</span>
+                    <span class="lang-tr">Destek ve İletişim</span>
+                    <span class="lang-en">Support and Contact</span>
+                </h2>
+                <p class="lang-tr">
+                    Gizlilik politikamız veya uygulama deneyiminizle ilgili her türlü soru, geri bildirim ve talebiniz için uygulama içi destek menüsünü veya mağaza sayfasındaki geliştirici destek kanallarını kullanabilirsiniz:
+                </p>
+                <p class="lang-en">
+                    For any questions, feedback, or requests regarding this Privacy Policy or your app experience, you may reach out via the in-app support menu or the developer support channels listed on the store page:
+                </p>
+                <div class="support-card">
+                    <div class="support-item">
+                        <span class="lang-tr">Uygulama Adı</span>
+                        <span class="lang-en">Application Name</span>
+                        <strong>Telefoncu: Esnaf Simülatörü</strong>
+                    </div>
+                    <div class="support-item">
+                        <span class="lang-tr">Uygulama İçi Destek</span>
+                        <span class="lang-en">In-App Support</span>
+                        <strong class="lang-tr">Ayarlar &gt; Hata Bildir</strong>
+                        <strong class="lang-en">Settings &gt; Report a Bug</strong>
+                    </div>
+                </div>
+            </section>
+
+            <footer>
+                <span class="lang-tr">&copy; 2026 Telefoncu: Esnaf Simülatörü. Tüm hakları saklıdır.</span>
+                <span class="lang-en">&copy; 2026 Telefoncu: Esnaf Simülatörü. All rights reserved.</span>
+                <span>v1.0 • App Store &amp; Google Play</span>
+            </footer>
+        </main>
     </div>
+
+    <script>
+        function setLang(lang) {
+            const trBtn = document.getElementById('btn-tr');
+            const enBtn = document.getElementById('btn-en');
+            if (lang === 'en') {
+                document.body.classList.add('en');
+                document.documentElement.lang = 'en';
+                enBtn.classList.add('active');
+                trBtn.classList.remove('active');
+            } else {
+                document.body.classList.remove('en');
+                document.documentElement.lang = 'tr';
+                trBtn.classList.add('active');
+                enBtn.classList.remove('active');
+            }
+        }
+    </script>
 </body>
 </html>
