@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Telefoncu: Esnaf Simülatörü Resmi Gizlilik Politikası / Official Privacy Policy">
     <link rel="icon" type="image/jpeg" href="app_icon.jpg">
+    <link rel="apple-touch-icon" href="app_icon.jpg">
     <title>Gizlilik Politikası • Telefoncu: Esnaf Simülatörü</title>
     <style>
         :root {
@@ -16,6 +17,8 @@
             --accent: #2563eb;
             --accent-hover: #1d4ed8;
             --accent-soft: #eff6ff;
+            --badge-green-bg: #ecfdf5;
+            --badge-green-text: #059669;
             --border: #e2e8f0;
             --shadow: 0 12px 30px -6px rgba(15, 23, 42, 0.07), 0 4px 12px -4px rgba(15, 23, 42, 0.04);
         }
@@ -30,6 +33,8 @@
                 --accent: #3b82f6;
                 --accent-hover: #60a5fa;
                 --accent-soft: rgba(59, 130, 246, 0.14);
+                --badge-green-bg: rgba(16, 185, 129, 0.14);
+                --badge-green-text: #34d399;
                 --border: #1e293b;
                 --shadow: 0 12px 30px -6px rgba(0, 0, 0, 0.45);
             }
@@ -81,6 +86,7 @@
             height: 38px;
             border-radius: 10px;
             object-fit: cover;
+            background-color: var(--surface-alt);
             border: 1px solid var(--border);
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
         }
@@ -138,8 +144,17 @@
             border-radius: 22px;
             object-fit: cover;
             flex-shrink: 0;
+            background-color: var(--surface-alt);
             border: 1px solid var(--border);
             box-shadow: 0 10px 24px rgba(15, 23, 42, 0.14);
+        }
+
+        .badge-row {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 10px;
         }
 
         .pill {
@@ -152,7 +167,17 @@
             font-weight: 600;
             padding: 4px 12px;
             border-radius: 999px;
-            margin-bottom: 10px;
+        }
+
+        .pill-age {
+            display: inline-flex;
+            align-items: center;
+            background: var(--badge-green-bg);
+            color: var(--badge-green-text);
+            font-size: 0.78rem;
+            font-weight: 700;
+            padding: 4px 11px;
+            border-radius: 999px;
         }
 
         h1 {
@@ -339,7 +364,7 @@
     <div class="wrapper">
         <div class="topbar">
             <div class="brand">
-                <img src="app_icon.png" alt="Telefoncu: Esnaf Simülatörü" class="brand-icon">
+                <img src="app_icon.jpg" alt="Telefoncu: Esnaf Simülatörü" class="brand-icon">
                 <span>Telefoncu: Esnaf Simülatörü</span>
             </div>
             <div class="lang-switch" role="group" aria-label="Language Switcher">
@@ -350,11 +375,17 @@
 
         <main class="card">
             <div class="doc-header">
-                <img src="app_icon.png" alt="Telefoncu: Esnaf Simülatörü İkonu" class="hero-icon">
+                <img src="app_icon.jpg" alt="Telefoncu: Esnaf Simülatörü İkonu" class="hero-icon">
                 <div>
-                    <div class="pill">
-                        <span class="lang-tr">Son Güncelleme: 13 Kasım 2026</span>
-                        <span class="lang-en">Last Updated: November 13, 2026</span>
+                    <div class="badge-row">
+                        <div class="pill">
+                            <span class="lang-tr">Son Güncelleme: 13 Kasım 2026</span>
+                            <span class="lang-en">Last Updated: November 13, 2026</span>
+                        </div>
+                        <div class="pill-age">
+                            <span class="lang-tr">Yaş Derecelendirmesi: 4+</span>
+                            <span class="lang-en">Age Rating: 4+</span>
+                        </div>
                     </div>
                     <h1 class="lang-tr">Gizlilik Politikası</h1>
                     <h1 class="lang-en">Privacy Policy</h1>
@@ -371,12 +402,12 @@
                 <div class="toc-title lang-tr">Hızlı Erişim</div>
                 <div class="toc-title lang-en">Quick Navigation</div>
                 <ul class="toc-grid">
-                    <li><a href="#sec-1"><span class="lang-tr">1. Toplanan Veriler ve Yerel Kayıt</span><span class="lang-en">1. Data Collection &amp; Local Storage</span></a></li>
-                    <li><a href="#sec-2"><span class="lang-tr">2. Reklamlar ve Üçüncü Taraflar</span><span class="lang-en">2. Advertising &amp; Third Parties</span></a></li>
-                    <li><a href="#sec-3"><span class="lang-tr">3. Veri Güvenliği ve Silme Hakları</span><span class="lang-en">3. Data Security &amp; Deletion Rights</span></a></li>
-                    <li><a href="#sec-4"><span class="lang-tr">4. Çocukların Gizliliği</span><span class="lang-en">4. Children's Privacy</span></a></li>
+                    <li><a href="#sec-1"><span class="lang-tr">1. Toplanan Veriler ve Yerel Kayıt</span><span class="lang-en">1. Data Collection & Local Storage</span></a></li>
+                    <li><a href="#sec-2"><span class="lang-tr">2. Reklamlar ve Üçüncü Taraflar</span><span class="lang-en">2. Advertising & Third Parties</span></a></li>
+                    <li><a href="#sec-3"><span class="lang-tr">3. Veri Güvenliği ve Silme Hakları</span><span class="lang-en">3. Data Security & Deletion Rights</span></a></li>
+                    <li><a href="#sec-4"><span class="lang-tr">4. Yaş Uygunluğu ve Genç Kullanıcı Gizliliği (4+)</span><span class="lang-en">4. Age Appropriateness & Younger Users (4+)</span></a></li>
                     <li><a href="#sec-5"><span class="lang-tr">5. Politika Güncellemeleri</span><span class="lang-en">5. Policy Updates</span></a></li>
-                    <li><a href="#sec-6"><span class="lang-tr">6. Destek ve İletişim</span><span class="lang-en">6. Support &amp; Contact</span></a></li>
+                    <li><a href="#sec-6"><span class="lang-tr">6. Destek ve İletişim</span><span class="lang-en">6. Support & Contact</span></a></li>
                 </ul>
             </nav>
 
@@ -388,16 +419,16 @@
                     <span class="lang-en">Data Collection and Local Storage</span>
                 </h2>
                 <p class="lang-tr">
-                    <strong>Telefoncu: Esnaf Simülatörü</strong> ("Uygulama"); adınız, soyadınız, telefon numaranız, e-posta adresiniz veya kesin konum veriniz gibi doğrudan kişisel kimlik bilgilerini <strong>toplamaz ve harici sunucularda depolamaz</strong>.
+                    <strong>Telefoncu: Esnaf Simülatörü</strong> ("Uygulama"); adınız, soyadınız, telefon numaranız, e-posta adresiniz veya kesin konum veriniz gibi doğrudan kişisel kimlik bilgilerini <strong>toplamaz, işlemez ve harici sunucularda depolamaz</strong>.
                 </p>
                 <p class="lang-en">
-                    <strong>Telefoncu: Esnaf Simülatörü</strong> ("Application") does <strong>not collect or store on external servers</strong> any directly identifiable personal information such as your name, phone number, email address, or precise location data.
+                    <strong>Telefoncu: Esnaf Simülatörü</strong> ("Application") does <strong>not collect, process, or store on external servers</strong> any directly identifiable personal information such as your name, phone number, email address, or precise location data.
                 </p>
                 <ul>
-                    <li class="lang-tr"><strong>Yerel Oyun İlerlemesi:</strong> Oyun içi bakiyeniz, dükkân seviyeniz, envanteriniz, tamir geçmişiniz ve uygulama ayarlarınız yalnızca kendi cihazınızın yerel depolama alanında tutulur.</li>
+                    <li class="lang-tr"><strong>Yerel Oyun İlerlemesi:</strong> Oyun içi bakiyeniz, dükkân seviyeniz, envanteriniz, tamir geçmişiniz ve uygulama ayarlarınız yalnızca kendi cihazınızın yerel depolama alanında şifresiz yerel veritabanında tutulur.</li>
                     <li class="lang-en"><strong>Local Game Progress:</strong> Your in-game balance, shop level, inventory, repair logs, and settings are stored exclusively on your device's local storage.</li>
-                    <li class="lang-tr"><strong>Hesap Gerektirmez:</strong> Uygulamayı kullanmak için kayıt olmanız, şifre oluşturmanız veya herhangi bir sosyal medya hesabıyla giriş yapmanız gerekmez.</li>
-                    <li class="lang-en"><strong>No Account Required:</strong> You do not need to register, create a password, or sign in with any social media account to play the Application.</li>
+                    <li class="lang-tr"><strong>Hesap veya Kayıt Gerektirmez:</strong> Uygulamayı oynamak için üyelik oluşturmanız, şifre belirlemeniz veya herhangi bir sosyal medya hesabıyla giriş yapmanız gerekmez.</li>
+                    <li class="lang-en"><strong>No Account or Sign-In Required:</strong> You do not need to register, create a password, or sign in with any social media account to play the Application.</li>
                 </ul>
             </section>
 
@@ -409,32 +440,32 @@
                     <span class="lang-en">Advertising Services and Third Parties (Google AdMob)</span>
                 </h2>
                 <p class="lang-tr">
-                    Uygulama, ücretsiz olarak sunulabilmek amacıyla <strong>Google AdMob</strong> reklam altyapısını kullanır. Google AdMob; reklam gösterimi, sıklık kontrolü, hata analizi ve performans ölçümü için kullanıcı kimliğine bağlanmayan standart teknik verileri işleyebilir:
+                    Uygulama, ücretsiz olarak sunulabilmek amacıyla <strong>Google AdMob</strong> reklam altyapısını kullanır. Google AdMob; isteğe bağlı ödüllü reklamların gösterimi, sıklık kontrolü, hata analizi ve performans ölçümü için kullanıcı kimliğine bağlanmayan standart teknik sinyalleri işleyebilir:
                 </p>
                 <p class="lang-en">
-                    To remain free to play, the Application uses <strong>Google AdMob</strong> advertising services. Google AdMob may process standard technical data—not linked to your personal identity—for ad delivery, frequency capping, crash diagnostics, and performance measurement:
+                    To remain free to play, the Application uses <strong>Google AdMob</strong> advertising services. Google AdMob may process standard technical signals—not linked to your personal identity—for optional rewarded ad delivery, frequency capping, crash diagnostics, and performance measurement:
                 </p>
                 <ul>
-                    <li class="lang-tr"><strong>Cihaz Kimliği (Device ID):</strong> Reklam tanımlayıcıları (iOS cihazlarda IDFA, Android cihazlarda AAID)</li>
-                    <li class="lang-en"><strong>Device Identifiers:</strong> Advertising identifiers (IDFA on iOS devices, AAID on Android devices)</li>
+                    <li class="lang-tr"><strong>Cihaz Kimliği (Device ID):</strong> Reklam tanımlayıcıları (iOS cihazlarda yalnızca açık izin verilmesi halinde IDFA, Android cihazlarda AAID)</li>
+                    <li class="lang-en"><strong>Device Identifiers:</strong> Advertising identifiers (IDFA on iOS devices only if explicitly permitted, AAID on Android devices)</li>
                     <li class="lang-tr"><strong>Reklam ve Ürün Etkileşimi:</strong> Reklam görüntüleme, tıklama ve uygulama içi temel etkileşim sinyalleri</li>
-                    <li class="lang-en"><strong>Advertising &amp; Product Interaction:</strong> Ad impressions, clicks, and basic in-app interaction signals</li>
+                    <li class="lang-en"><strong>Advertising & Product Interaction:</strong> Ad impressions, clicks, and basic in-app interaction signals</li>
                     <li class="lang-tr"><strong>Tanılama (Diagnostics):</strong> Uygulama kararlılığını artırmak için toplanan anonim çökme (crash) ve performans verileri</li>
                     <li class="lang-en"><strong>Diagnostics:</strong> Anonymous crash and performance logs collected to improve application stability</li>
                     <li class="lang-tr"><strong>Temel Cihaz ve Ağ Bilgileri:</strong> Cihaz modeli, işletim sistemi sürümü, dil tercihi ve IP tabanlı genel ülke/bölge bilgisi</li>
-                    <li class="lang-en"><strong>Basic Device &amp; Network Info:</strong> Device model, OS version, language preference, and approximate IP-based country/region</li>
+                    <li class="lang-en"><strong>Basic Device & Network Info:</strong> Device model, OS version, language preference, and approximate IP-based country/region</li>
                 </ul>
                 <div class="info-callout lang-tr">
-                    <strong>Apple App Tracking Transparency (ATT):</strong> iOS cihazlarda reklam tanımlayıcısına (IDFA) yalnızca uygulama açılışında gösterilen Apple izin penceresinden açıkça onay vermeniz halinde erişilir. İzin vermeseniz dahi oyunu tüm özellikleriyle oynamaya devam edebilirsiniz.
+                    <strong>Apple App Tracking Transparency (ATT):</strong> iOS cihazlarda reklam tanımlayıcısına (IDFA) yalnızca uygulama açılışında gösterilen Apple izin penceresinden açıkça onay vermeniz halinde erişilir. İzin vermeseniz dahi bağlamsal (kişiselleştirilmemiş) reklamlar sunulur ve oyunu tüm özellikleriyle oynamaya devam edebilirsiniz.
                 </div>
                 <div class="info-callout lang-en">
-                    <strong>Apple App Tracking Transparency (ATT):</strong> On iOS devices, the advertising identifier (IDFA) is accessed only if you explicitly grant permission via the Apple tracking prompt. You can continue playing the game with all features even if you decline tracking.
+                    <strong>Apple App Tracking Transparency (ATT):</strong> On iOS devices, the advertising identifier (IDFA) is accessed only if you explicitly grant permission via the Apple tracking prompt. Even if you decline tracking, non-personalized contextual ads are served and you can continue playing the game with all features.
                 </div>
                 <p class="lang-tr">
-                    Google'ın verileri nasıl işlediği hakkında ayrıntılı bilgi için: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Gizlilik Politikası &rarr;</a>
+                    Google'ın verileri nasıl işlediği hakkında ayrıntılı bilgi için: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Gizlilik Politikası →</a>
                 </p>
                 <p class="lang-en">
-                    For detailed information on how Google processes data, please visit: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy &rarr;</a>
+                    For detailed information on how Google processes data, please visit: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy →</a>
                 </p>
             </section>
 
@@ -446,16 +477,16 @@
                     <span class="lang-en">Data Security and Your Deletion Rights</span>
                 </h2>
                 <p class="lang-tr">
-                    Oyun verileriniz harici bir bulut veritabanında tutulmadığından tüm verilerinizin kontrolü doğrudan sizdedir:
+                    Oyun verileriniz herhangi bir harici sunucuda veya bulut veritabanında tutulmadığından tüm verilerinizin kontrolü doğrudan cihazınızda ve sizdedir:
                 </p>
                 <p class="lang-en">
-                    Because your game data is not stored in any external cloud database, you maintain full control over your data:
+                    Because your game data is not stored on any external server or cloud database, you maintain complete control over your data directly on your device:
                 </p>
                 <ul>
-                    <li class="lang-tr"><strong>Tam Veri Silme:</strong> Uygulamayı cihazınızdan kaldırdığınızda cihazınızda saklanan tüm yerel oyun verileri kalıcı olarak silinir.</li>
-                    <li class="lang-en"><strong>Complete Data Deletion:</strong> Uninstalling the Application from your device permanently deletes all locally stored game data.</li>
-                    <li class="lang-tr"><strong>Reklam Tercihlerini Yönetme:</strong> Cihazınızın <strong>Ayarlar &gt; Gizlilik ve Güvenlik &gt; Takip</strong> (iOS) veya <strong>Ayarlar &gt; Google &gt; Reklamlar</strong> (Android) menüsünden reklam tanımlayıcınızı sıfırlayabilir veya kişiselleştirilmiş reklamları kapatabilirsiniz.</li>
-                    <li class="lang-en"><strong>Managing Ad Preferences:</strong> You can reset your advertising identifier or opt out of personalized ads anytime via <strong>Settings &gt; Privacy &amp; Security &gt; Tracking</strong> (iOS) or <strong>Settings &gt; Google &gt; Ads</strong> (Android).</li>
+                    <li class="lang-tr"><strong>Tam Veri Silme:</strong> Uygulamayı cihazınızdan kaldırdığınızda cihazınızda saklanan tüm yerel oyun ilerlemesi ve ayarlar kalıcı olarak silinir.</li>
+                    <li class="lang-en"><strong>Complete Data Deletion:</strong> Uninstalling the Application from your device permanently deletes all locally stored game progress and settings.</li>
+                    <li class="lang-tr"><strong>Reklam Tercihlerini Yönetme:</strong> Cihazınızın <strong>Ayarlar > Gizlilik ve Güvenlik > Takip</strong> (iOS) veya <strong>Ayarlar > Google > Reklamlar</strong> (Android) menüsünden takip iznini dilediğiniz zaman geri çekebilir veya reklam tanımlayıcınızı sıfırlayabilirsiniz.</li>
+                    <li class="lang-en"><strong>Managing Ad Preferences:</strong> You can revoke tracking permission or reset your advertising identifier anytime via <strong>Settings > Privacy & Security > Tracking</strong> (iOS) or <strong>Settings > Google > Ads</strong> (Android).</li>
                 </ul>
             </section>
 
@@ -463,15 +494,21 @@
             <section id="sec-4">
                 <h2>
                     <span class="sec-num">4</span>
-                    <span class="lang-tr">Çocukların Gizliliği</span>
-                    <span class="lang-en">Children's Privacy</span>
+                    <span class="lang-tr">Yaş Uygunluğu ve Genç Kullanıcı Gizliliği (4+)</span>
+                    <span class="lang-en">Age Appropriateness and Younger Users' Privacy (4+)</span>
                 </h2>
                 <p class="lang-tr">
-                    Uygulama, 13 yaşın altındaki çocuklara yönelik değildir ve 13 yaşın altındaki çocuklardan bilerek hiçbir kişisel veri toplamaz.
+                    <strong>Telefoncu: Esnaf Simülatörü</strong>, mağaza derecelendirme standartlarına uygun olarak <strong>4+ yaş</strong> genel kitle kategorisinde sunulmaktadır. Uygulama içerisinde sakıncalı içerik, şiddet, kumar veya kişisel bilgi toplama mekanizması bulunmaz.
                 </p>
                 <p class="lang-en">
-                    The Application is not directed toward children under the age of 13, and we do not knowingly collect any personal data from children under 13.
+                    <strong>Telefoncu: Esnaf Simülatörü</strong> is rated <strong>4+</strong> for general audiences in accordance with store rating guidelines. The Application contains no objectionable content, violence, gambling, or personal data collection mechanisms.
                 </p>
+                <ul>
+                    <li class="lang-tr"><strong>Sıfır Kişisel Veri Toplama:</strong> Çocuklar dahil hiçbir kullanıcıdan ad, e-posta, konum veya kimlik bilgisi talep edilmez ve toplanmaz.</li>
+                    <li class="lang-en"><strong>Zero Personal Data Collection:</strong> No name, email, location, or personally identifiable information is requested or collected from any user, including children.</li>
+                    <li class="lang-tr"><strong>Yaşa Uygun Reklam Politikası:</strong> Gösterilen reklamlar genel kitle ve yaşa uygunluk standartları (COPPA ve ilgili çocuk gizliliği düzenlemeleri) çerçevesinde filtreli olarak sunulur.</li>
+                    <li class="lang-en"><strong>Age-Appropriate Ad Delivery:</strong> Ads served within the Application adhere to general audience and child-safety compliance standards (including COPPA and applicable youth privacy regulations).</li>
+                </ul>
             </section>
 
             <!-- SECTION 5 -->
@@ -482,10 +519,10 @@
                     <span class="lang-en">Policy Updates</span>
                 </h2>
                 <p class="lang-tr">
-                    Bu Gizlilik Politikası, yasal düzenlemeler veya uygulamaya eklenen yeni özellikler doğrultusunda zaman zaman güncellenebilir. Yapılan değişiklikler bu sayfada yayınlandığı andan itibaren geçerlilik kazanır.
+                    Bu Gizlilik Politikası, yasal düzenlemeler, mağaza gereksinimleri veya uygulamaya eklenen yeni özellikler doğrultusunda zaman zaman güncellenebilir. Yapılan değişiklikler bu sayfada yayınlandığı andan itibaren geçerlilik kazanır.
                 </p>
                 <p class="lang-en">
-                    This Privacy Policy may be updated periodically in accordance with legal requirements or new features added to the Application. Any changes become effective immediately upon publication on this page.
+                    This Privacy Policy may be updated periodically in accordance with legal requirements, store guidelines, or new features added to the Application. Any changes become effective immediately upon publication on this page.
                 </p>
             </section>
 
@@ -497,10 +534,10 @@
                     <span class="lang-en">Support and Contact</span>
                 </h2>
                 <p class="lang-tr">
-                    Gizlilik politikamız, veri haklarınız veya uygulama deneyiminizle ilgili her türlü soru, geri bildirim ve destek talebiniz için uygulama içi destek menüsünü veya mağaza sayfasındaki geliştirici destek kanallarını kullanabilirsiniz:
+                    Gizlilik politikamız, veri haklarınız veya uygulama deneyiminizle ilgili her türlü soru, geri bildirim ve destek talebiniz için uygulama içi destek menüsünü veya resmi mağaza destek kanallarını kullanabilirsiniz:
                 </p>
                 <p class="lang-en">
-                    For any questions, data privacy inquiries, feedback, or support requests regarding this Privacy Policy or your app experience, please use the in-app support menu or the official developer support channels listed on the store page:
+                    For any questions, data privacy inquiries, feedback, or support requests regarding this Privacy Policy or your app experience, please use the in-app support menu or official store support channels:
                 </p>
                 <div class="support-card">
                     <div class="support-item">
@@ -511,22 +548,22 @@
                     <div class="support-item">
                         <span class="lang-tr">Uygulama İçi Destek</span>
                         <span class="lang-en">In-App Support</span>
-                        <strong class="lang-tr">Ayarlar &gt; Hata Bildir</strong>
-                        <strong class="lang-en">Settings &gt; Report a Bug</strong>
+                        <strong class="lang-tr">Ayarlar > Hata Bildir</strong>
+                        <strong class="lang-en">Settings > Report a Bug</strong>
                     </div>
                     <div class="support-item">
                         <span class="lang-tr">Mağaza Desteği</span>
                         <span class="lang-en">Store Support</span>
-                        <strong class="lang-tr">App Store &amp; Google Play Destek</strong>
-                        <strong class="lang-en">App Store &amp; Google Play Support</strong>
+                        <strong class="lang-tr">App Store & Google Play Destek</strong>
+                        <strong class="lang-en">App Store & Google Play Support</strong>
                     </div>
                 </div>
             </section>
 
             <footer>
-                <span class="lang-tr">&copy; 2026 Telefoncu: Esnaf Simülatörü. Tüm hakları saklıdır.</span>
-                <span class="lang-en">&copy; 2026 Telefoncu: Esnaf Simülatörü. All rights reserved.</span>
-                <span>v1.0 • App Store &amp; Google Play</span>
+                <span class="lang-tr">© 2026 Telefoncu: Esnaf Simülatörü. Tüm hakları saklıdır.</span>
+                <span class="lang-en">© 2026 Telefoncu: Esnaf Simülatörü. All rights reserved.</span>
+                <span>v1.0 • App Store & Google Play</span>
             </footer>
         </main>
     </div>
